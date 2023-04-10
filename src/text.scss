@@ -1,0 +1,58 @@
+@keyframes float {
+
+    from,
+    to {
+        transform: translateY(-0%);
+    }
+
+    50% {
+        transform: translateY(-3%);
+    }
+}
+
+
+.textBlock {
+    left: 100px;
+    position: absolute;
+    z-index: 5;
+
+    @media (max-width:480px) {
+        left: 60px;
+    }
+}
+
+.fancy span {
+    display: inline-block;
+}
+
+.fancy>.outer {
+    transition: all 350ms ease;
+}
+
+.fancy:hover>.outer {
+    transition-duration: 800ms;
+}
+
+.fancy:hover>.outer>.inner {
+    animation: float 5s ease infinite;
+}
+
+.fancy:hover>.outer:nth-child(1) {
+    transform: translate(-30%, -20%) rotate(8deg);
+}
+
+.fancy:hover>.outer:nth-child(2) {
+    transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover>.outer:nth-child(3) {
+    transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover>.outer:nth-child(4) {
+    transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover>.outer:nth-child(5) {
+    transform: translate(0%, -20%) rotate(5deg);
+}
